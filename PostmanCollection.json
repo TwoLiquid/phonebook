@@ -1,0 +1,319 @@
+{
+	"info": {
+		"_postman_id": "da06d018-e289-4cde-95c6-64df3fc447b2",
+		"name": "Phonebook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Максим\",\n\t\"email\": \"twoliquid@gmail.com\",\n    \"password\": \"qwerty\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://test.test/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"test",
+								"test"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"email\": \"twoliquid@gmail.com\",\n\t\"password\": \"qqq\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://test.test/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"test",
+								"test"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiNTFkOGExMzQ3ZDJjNGZhYTE3OWI3NWFkODA5N2FlMTRiMTkxM2IyMjE1YzZkYTM1YzAwYzQ2YTgxYmQxNWNiYWUwNGI3NDFlNTRkZjM0NGQiLCJpYXQiOjE1OTkxNDQ3ODksIm5iZiI6MTU5OTE0NDc4OSwiZXhwIjoxNjMwNjgwNzg5LCJzdWIiOiIzIiwic2NvcGVzIjpbXX0.SKH_zubOgsM7itkmvguPJqvbFvjOI1y4WEk0wr1jyQHuL1GWW_EMYyWxRVVTGQcd7lcnY9a6hnL8ybx9v9fZayThI3eRd5XBYi5kd6YA2d6TAm3tJAIXTItPaj3v0UgPVH-WHD0XSB_Lsk_RzV6qSl96UaJytnlT20vHtAqTC5luQQuf_g03-xyJJn7xC1i8fKpvQI7gB_zpd7sUa3p-TT0XCKzin4Uvs-WnpTodBntCXmAeP82mipSyrVC-vr42TCCldAd5t_aCNMojVSV9YRpuL9y26ICux5WhuR-GOBGz4rfZIijpRZg-2K_N7I-wygtrihDSukJGjGA0B5iSsLYvVzyHMwyNZd2p26bxyd6eRGAUq7R38-1yDH-amS5p_nj4bLqqHLm8hECP_VF7wVgHCbAHk95wnOG3xZInLlvzMgXBUn6dM_Ee2YTsTQYSKYpqMghyxrnAVScsP0jpDm_DyEehb1Xuof41JQGzQrFde6-_mndbhKU5lZQiVKc816ExBixYJhwVn6hDTqR8OkVF15y2Tph5w38UktztfI-kBSTVGxXnvRaWwCu4ncwqVWcy_l_4DjfJ0sxuNtjDiXUvzNaViBybgfTUItYdzuZob8fC5GjJW_u9IVOHdCRvPRzX4KmYiAoGQuWK_j87XEDbqnhpICFOfyjJvCHDIIw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI5MGYwNmI2Ny1jMzc1LTRlMTgtYTg4NC05ODc5NDFkNjU4ODIiLCJqdGkiOiJiNmMzZTJiMWU4NjQyMzFlMDNkZWY2OGI5MDBiMGMyNDdmNTMxNDYxMDkwY2IwNGQ1MTkyYmVmNjNmYzg3ZTM2NjcxMzM0NWQ2ZjA0MzllNyIsImlhdCI6MTU5MzYyMjc1OSwibmJmIjoxNTkzNjIyNzU5LCJleHAiOjE2MjUxNTg3NTksInN1YiI6IiIsInNjb3BlcyI6W119.Ujp_Eso-mV4tT_dMRtJixlhixpuy0lhf4M9UPuLabasN3tMsZwSSjCzN4tcXV2DwWjChTgx0RblYB_Wd7GluRbYEevcRyVC_tvH4-tdqIfpZCZFQAprTjqmWkigrg7q00SN7GkTTQuskngOuGpfH2Lv81OJKJUKYblHwXp8IkRnDJ21pz2umH4JzuFgocFVmRCLiWXvPTk-Ar1Ts3dahX6BiKD4wnt_qCS6jVEEfqqHnv3n_OZ81boSWcYwFxaSblBufO8MjZkwyI1kKfqRR2R6G85UrjhHPCqgA0bHrHAnifzxN_0t2AdJkrTIEDPtzRCEp3dDVwfZM0j8RWdKMbG2MYD245hfGbyx_41Bt5HcWqqzS4oMWYsRKbDKEiqL3YMaQ94xpKblJ1_YM9FBStgS3h2-VI8vssA6slnkCUSbIThmYcsBrXSpmPbRtmPY2uJKq8JVur33uhkYlbkkTIMOcBbApHIAdQgyWqtK7pJAgFkxnZ9oBf2NfFxs7h4vjmUHga_o4YxB8aasYfBNClxgZn02SdZAkrrmJyDsbt7INFGGo3UnozYli8cKRiL7qScpBxBZF6J5ZJ37PAlslbkANtFlTkgNBXfzDgwjAB_HVwk91XMQ2fWPSb6ZNTReY6qtNUdljZdTB3YQL4d9v5Z-KgPvaDYBQWXt3Ej6RGLY",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://test.test/api/auth/logout",
+							"protocol": "http",
+							"host": [
+								"test",
+								"test"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "contacts",
+			"item": [
+				{
+					"name": "get",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzVkZTU5ZGYzYzMyMmZhNWFhNjdmODliZmUzMGE5YjA4ZjM3OThiYzdjNDMxYTI2OWJkODQ3MzFjZDE1NzNjNmMwNDhmNmM2YTNjNzU5ZWQiLCJpYXQiOjE1OTkxNjAwNDYsIm5iZiI6MTU5OTE2MDA0NiwiZXhwIjoxNjMwNjk2MDQ2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ppFv55VywqMxWrJ0BAGVuaUYl2ah4_NC0TNb3mSQl_J86WflCXDOuJPUirHsjIfF5z2cOTQLW3IPvPzmm8psEDaNrlkczuA5PA6k17M1TSVjDaCswXv1fk3xTsTrDOHwz7tXtp_vABTLiJ4J5NOk1WsxLSjwcSYz8GRIaz2gqLoXsJXBQP1lksJU8uUV-R8dif2OZGZwztBhobv0LTvYxJq7whOjG4mhRIRXBe81EP8GWee3c48rtfVk9qVGFDHOgie5F-Kn6OcMPc2VlStZdkvUhASznhVBi3Hedbjo4-U-0bbhuSNP5uVk6YWXo2sg7NVmp0gTw_hvNQ6__Y24WZ1_lti2WEQK3JOrj367Hc9GxUrk5ArbQQgfb6FKxuXnmDqlE_2cwoAGn5wtcPMhWlWM-7UPSFJe9E38HCrZeBc0Jf10pMCx0_YX6Jjve71IzAm5q0DDuToudcvw37gTULJWu1iwwSD3AzTLky7jzR0FftQkuGJ3dbgYAHvTWhvxbTLQEdwa3vM1QePFXeacE_620zBPCeAOO8ao25EeCQ6beBAFHQAIaTsfA8C05TSB8dumpaEcqUTV2FDHFL2S58DQ7vmNl1olV7wjTG9iE974qKgRSj4K5dhwy36kye8XWIV2DMMiMZfGmSLR25ACxx8ZXL2cUSCeZXBUGsVv2PE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://test.test/api/contacts/get/2",
+							"protocol": "http",
+							"host": [
+								"test",
+								"test"
+							],
+							"path": [
+								"api",
+								"contacts",
+								"get",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzVkZTU5ZGYzYzMyMmZhNWFhNjdmODliZmUzMGE5YjA4ZjM3OThiYzdjNDMxYTI2OWJkODQ3MzFjZDE1NzNjNmMwNDhmNmM2YTNjNzU5ZWQiLCJpYXQiOjE1OTkxNjAwNDYsIm5iZiI6MTU5OTE2MDA0NiwiZXhwIjoxNjMwNjk2MDQ2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ppFv55VywqMxWrJ0BAGVuaUYl2ah4_NC0TNb3mSQl_J86WflCXDOuJPUirHsjIfF5z2cOTQLW3IPvPzmm8psEDaNrlkczuA5PA6k17M1TSVjDaCswXv1fk3xTsTrDOHwz7tXtp_vABTLiJ4J5NOk1WsxLSjwcSYz8GRIaz2gqLoXsJXBQP1lksJU8uUV-R8dif2OZGZwztBhobv0LTvYxJq7whOjG4mhRIRXBe81EP8GWee3c48rtfVk9qVGFDHOgie5F-Kn6OcMPc2VlStZdkvUhASznhVBi3Hedbjo4-U-0bbhuSNP5uVk6YWXo2sg7NVmp0gTw_hvNQ6__Y24WZ1_lti2WEQK3JOrj367Hc9GxUrk5ArbQQgfb6FKxuXnmDqlE_2cwoAGn5wtcPMhWlWM-7UPSFJe9E38HCrZeBc0Jf10pMCx0_YX6Jjve71IzAm5q0DDuToudcvw37gTULJWu1iwwSD3AzTLky7jzR0FftQkuGJ3dbgYAHvTWhvxbTLQEdwa3vM1QePFXeacE_620zBPCeAOO8ao25EeCQ6beBAFHQAIaTsfA8C05TSB8dumpaEcqUTV2FDHFL2S58DQ7vmNl1olV7wjTG9iE974qKgRSj4K5dhwy36kye8XWIV2DMMiMZfGmSLR25ACxx8ZXL2cUSCeZXBUGsVv2PE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://test.test/api/contacts/get",
+							"protocol": "http",
+							"host": [
+								"test",
+								"test"
+							],
+							"path": [
+								"api",
+								"contacts",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzVkZTU5ZGYzYzMyMmZhNWFhNjdmODliZmUzMGE5YjA4ZjM3OThiYzdjNDMxYTI2OWJkODQ3MzFjZDE1NzNjNmMwNDhmNmM2YTNjNzU5ZWQiLCJpYXQiOjE1OTkxNjAwNDYsIm5iZiI6MTU5OTE2MDA0NiwiZXhwIjoxNjMwNjk2MDQ2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ppFv55VywqMxWrJ0BAGVuaUYl2ah4_NC0TNb3mSQl_J86WflCXDOuJPUirHsjIfF5z2cOTQLW3IPvPzmm8psEDaNrlkczuA5PA6k17M1TSVjDaCswXv1fk3xTsTrDOHwz7tXtp_vABTLiJ4J5NOk1WsxLSjwcSYz8GRIaz2gqLoXsJXBQP1lksJU8uUV-R8dif2OZGZwztBhobv0LTvYxJq7whOjG4mhRIRXBe81EP8GWee3c48rtfVk9qVGFDHOgie5F-Kn6OcMPc2VlStZdkvUhASznhVBi3Hedbjo4-U-0bbhuSNP5uVk6YWXo2sg7NVmp0gTw_hvNQ6__Y24WZ1_lti2WEQK3JOrj367Hc9GxUrk5ArbQQgfb6FKxuXnmDqlE_2cwoAGn5wtcPMhWlWM-7UPSFJe9E38HCrZeBc0Jf10pMCx0_YX6Jjve71IzAm5q0DDuToudcvw37gTULJWu1iwwSD3AzTLky7jzR0FftQkuGJ3dbgYAHvTWhvxbTLQEdwa3vM1QePFXeacE_620zBPCeAOO8ao25EeCQ6beBAFHQAIaTsfA8C05TSB8dumpaEcqUTV2FDHFL2S58DQ7vmNl1olV7wjTG9iE974qKgRSj4K5dhwy36kye8XWIV2DMMiMZfGmSLR25ACxx8ZXL2cUSCeZXBUGsVv2PE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Яндекс такси\",\n\t\"phone\": \"+74959999997\",\n\t\"favorite\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://test.test/api/contacts/create",
+							"protocol": "http",
+							"host": [
+								"test",
+								"test"
+							],
+							"path": [
+								"api",
+								"contacts",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzVkZTU5ZGYzYzMyMmZhNWFhNjdmODliZmUzMGE5YjA4ZjM3OThiYzdjNDMxYTI2OWJkODQ3MzFjZDE1NzNjNmMwNDhmNmM2YTNjNzU5ZWQiLCJpYXQiOjE1OTkxNjAwNDYsIm5iZiI6MTU5OTE2MDA0NiwiZXhwIjoxNjMwNjk2MDQ2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ppFv55VywqMxWrJ0BAGVuaUYl2ah4_NC0TNb3mSQl_J86WflCXDOuJPUirHsjIfF5z2cOTQLW3IPvPzmm8psEDaNrlkczuA5PA6k17M1TSVjDaCswXv1fk3xTsTrDOHwz7tXtp_vABTLiJ4J5NOk1WsxLSjwcSYz8GRIaz2gqLoXsJXBQP1lksJU8uUV-R8dif2OZGZwztBhobv0LTvYxJq7whOjG4mhRIRXBe81EP8GWee3c48rtfVk9qVGFDHOgie5F-Kn6OcMPc2VlStZdkvUhASznhVBi3Hedbjo4-U-0bbhuSNP5uVk6YWXo2sg7NVmp0gTw_hvNQ6__Y24WZ1_lti2WEQK3JOrj367Hc9GxUrk5ArbQQgfb6FKxuXnmDqlE_2cwoAGn5wtcPMhWlWM-7UPSFJe9E38HCrZeBc0Jf10pMCx0_YX6Jjve71IzAm5q0DDuToudcvw37gTULJWu1iwwSD3AzTLky7jzR0FftQkuGJ3dbgYAHvTWhvxbTLQEdwa3vM1QePFXeacE_620zBPCeAOO8ao25EeCQ6beBAFHQAIaTsfA8C05TSB8dumpaEcqUTV2FDHFL2S58DQ7vmNl1olV7wjTG9iE974qKgRSj4K5dhwy36kye8XWIV2DMMiMZfGmSLR25ACxx8ZXL2cUSCeZXBUGsVv2PE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Яндекс такси\",\n\t\"phone\": \"+74959999998\",\n\t\"favorite\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://test.test/api/contacts/update/2",
+							"protocol": "http",
+							"host": [
+								"test",
+								"test"
+							],
+							"path": [
+								"api",
+								"contacts",
+								"update",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMzVkZTU5ZGYzYzMyMmZhNWFhNjdmODliZmUzMGE5YjA4ZjM3OThiYzdjNDMxYTI2OWJkODQ3MzFjZDE1NzNjNmMwNDhmNmM2YTNjNzU5ZWQiLCJpYXQiOjE1OTkxNjAwNDYsIm5iZiI6MTU5OTE2MDA0NiwiZXhwIjoxNjMwNjk2MDQ2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.ppFv55VywqMxWrJ0BAGVuaUYl2ah4_NC0TNb3mSQl_J86WflCXDOuJPUirHsjIfF5z2cOTQLW3IPvPzmm8psEDaNrlkczuA5PA6k17M1TSVjDaCswXv1fk3xTsTrDOHwz7tXtp_vABTLiJ4J5NOk1WsxLSjwcSYz8GRIaz2gqLoXsJXBQP1lksJU8uUV-R8dif2OZGZwztBhobv0LTvYxJq7whOjG4mhRIRXBe81EP8GWee3c48rtfVk9qVGFDHOgie5F-Kn6OcMPc2VlStZdkvUhASznhVBi3Hedbjo4-U-0bbhuSNP5uVk6YWXo2sg7NVmp0gTw_hvNQ6__Y24WZ1_lti2WEQK3JOrj367Hc9GxUrk5ArbQQgfb6FKxuXnmDqlE_2cwoAGn5wtcPMhWlWM-7UPSFJe9E38HCrZeBc0Jf10pMCx0_YX6Jjve71IzAm5q0DDuToudcvw37gTULJWu1iwwSD3AzTLky7jzR0FftQkuGJ3dbgYAHvTWhvxbTLQEdwa3vM1QePFXeacE_620zBPCeAOO8ao25EeCQ6beBAFHQAIaTsfA8C05TSB8dumpaEcqUTV2FDHFL2S58DQ7vmNl1olV7wjTG9iE974qKgRSj4K5dhwy36kye8XWIV2DMMiMZfGmSLR25ACxx8ZXL2cUSCeZXBUGsVv2PE",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"name\": \"Яндекс такси\",\n\t\"phone\": \"+74959999998\",\n\t\"favorite\": false\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://test.test/api/contacts/delete/2",
+							"protocol": "http",
+							"host": [
+								"test",
+								"test"
+							],
+							"path": [
+								"api",
+								"contacts",
+								"delete",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
